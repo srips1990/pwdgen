@@ -1,0 +1,95 @@
+<NewGrid>:
+    hash_algo_index: 1
+    cols: 1
+    size_hint: 0.9, 0.9
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    GridLayout:
+        id: grid1
+        cols: 2
+        row_force_default: True
+        row_default_height: 30
+        Label:
+            id: userlbl
+            text: "Secret Key (ex., cypher@example.com):"
+            size_hint: 0.6, 0.7
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        TextInput:
+            id: usertxtbox
+            text: ""
+            multiline: False
+            write_tab: False
+        Label:
+            id: pwdlenlbl
+            text: "Enter password Length (default - 32):"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        TextInput:
+            id: passlentxtbox
+            text: ""
+            multiline: False
+            write_tab: False
+            input_type: 'number'
+            input_filter: 'int'
+    GridLayout:
+        id: grid2
+        cols: 3
+        row_default_height: 40
+        row_force_default: True
+        Button:
+            id: sha256btn
+            text: "SHA256"
+            value: 1
+            background_color: "#94e5ff"
+            on_press: root.set_hash_algo(self)
+        Button:
+            id: sha384btn
+            text: "SHA384"
+            background_color: "#928E85"
+            value: 2
+            on_press: root.set_hash_algo(self)
+        Button:
+            id: sha512btn
+            text: "SHA512"
+            background_color: "#928E85"
+            value: 3
+            on_press: root.set_hash_algo(self)
+    GridLayout:
+        id: grid3
+        cols: 3
+        row_default_height: 50
+        row_force_default: True
+        spacing: 15
+        Label:
+            text: ""
+        Button:
+            id: submitButton
+            text: "Generate"
+            on_press: root.invoke(self)
+        Label:
+            text: ""
+    GridLayout:
+        id: grid4
+        cols: 3
+        row_default_height: 40
+        row_force_default: True
+        TextInput:
+            id: pwdresulttxtbox
+            text: ""
+            multiline: False
+            width: 120
+            disabled: True
+    GridLayout:
+        id: grid5
+        cols: 3
+        row_default_height: 50
+        row_force_default: True
+        spacing: 15
+        Label:
+            text: ""
+            width: 10
+        Button:
+            id: copyButton
+            text: "Copy Text"
+            on_press: root.copy_to_clipboard(self)
+        Label:
+            text: ""
+            width: 10
