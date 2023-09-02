@@ -1,5 +1,7 @@
 import hashlib
 
+import settings
+
 
 class GeneratorLib:
 
@@ -9,12 +11,12 @@ class GeneratorLib:
         """
         self.username = username
         self.pwd_length_int = int(pwd_length) if (isinstance(pwd_length, int)) else 32
-        self.algo_list = {1: "sha256", 2: "sha384", 3: "sha512"}
+        self.algo_list = settings.ALGO
         self.algo_index = algo_index
         self.algo = self.algo_list[int(self.algo_index)] \
-            if (isinstance(self.algo_index, int) and (self.algo_index in range(1, 4))) \
+            if (isinstance(self.algo_index, int) and (self.algo_index in range(1, len(settings.ALGO) + 1))) \
             else self.algo_list[1]
-        self.iter = 100000
+        self.iter = settings.ITERATIONS
 
     def compute_hash(self, iterr=0):
         """

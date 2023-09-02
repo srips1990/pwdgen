@@ -1,8 +1,8 @@
 # PWDGen
 
 
-Generate passwords using a simple key phrase which you don't have to remember again.
-> _Note: The generated passwords are not stored anywhere_ 
+Generate strong passwords using a simple key phrase.
+> _Note: The generated passwords are not stored anywhere. Just remember the key phrase._ 
 
 ## Installation
 
