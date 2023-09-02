@@ -1,5 +1,6 @@
 build/
 dist/
+venv/
 .idea/
 __pycache__/
 _generator_app.py

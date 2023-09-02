@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['generator.py'],
+    ['generator_app.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='generator',
+    name='generator_gui',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
