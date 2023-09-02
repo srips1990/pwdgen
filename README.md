@@ -22,8 +22,7 @@ Generate strong passwords using a simple key phrase.
 
 **Step 4.** Once the previous command finishes executing, check the `build` directory. 
 You should be able to find the executable.
-
-
+<br /><br />
 ### GUI
 
 > _Prerequisite: Python3, PIP_
@@ -43,8 +42,7 @@ You should be able to find the executable.
 **Step 4.** Run the GUI application using the following command:
 
 `python generator_app.py`
-
-
+<br /><br />
 ## Contributors
 
 [Sripathi Srinivasan](https://sripathi.co.in)
